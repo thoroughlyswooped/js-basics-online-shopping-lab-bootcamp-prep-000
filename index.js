@@ -48,7 +48,7 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   var index = cart.indexOf(item);
-  
+  delete cart[index];
 }
 
 function placeOrder(cardNumber) {
