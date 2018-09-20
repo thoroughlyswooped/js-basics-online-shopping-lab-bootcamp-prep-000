@@ -48,10 +48,12 @@ function total() {
 function removeFromCart(item) {
   // write your code here
   var ogLength = cart.length;
+  if (cart.length !== 0){
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
       delete cart[i];
     }
+  }
   }
   if (cart.length === ogLength) {
     return "That item is not in your cart."
