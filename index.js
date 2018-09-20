@@ -50,7 +50,7 @@ function removeFromCart(item) {
   console.log(cart);
   var ogLength = cart.length;
   for (var i = 0; i < cart.length; i++) {
-    if (cart[i].itemName === item) {
+    if (cart[i][0] === item) {
       delete cart[i];
     }
   }
