@@ -26,10 +26,10 @@ function viewCart() {
         // check if current item is the last item in the cart
         if (i === cart.length - 1){
           // if it isn't then you need to add a comma and the data
-          returnString += `, and ${cart[i].itemName} at ${itemPrice}.`
+          returnString += `, and ${cart[i].itemName} at $${itemPrice}.`
         } else {
           // otherwise just close off the statement
-          returnString += `, ${cart[i].itemName} at ${cart[i].itemPrice}`;
+          returnString += `, ${cart[i].itemName} at $${cart[i].itemPrice}`;
         }
     }
     return returnString;
@@ -38,10 +38,16 @@ function viewCart() {
 
 function total() {
   // write your code here
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) { 
+    total += cart[i].itemPrice;
+  }
+  return total;
 }
 
 function removeFromCart(item) {
   // write your code here
+  
 }
 
 function placeOrder(cardNumber) {
