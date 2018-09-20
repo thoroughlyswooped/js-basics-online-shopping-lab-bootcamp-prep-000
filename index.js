@@ -53,6 +53,9 @@ function removeFromCart(item) {
       delete cart[i];
     }
   }
+  if (cart.length === ogLength) {
+    return "That item is not in your cart."
+  }
   return cart;
 }
 
