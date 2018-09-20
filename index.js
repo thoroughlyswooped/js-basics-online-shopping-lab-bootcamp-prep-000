@@ -21,7 +21,7 @@ function viewCart() {
   if (cart.length === 0){
     return "Your shopping cart is empty";
   } else {
-    var returnString = `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}`;
+    var returnString = `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
     for (var i = 1 ; i < cart.length; i++){
         // check if current item is the last item in the cart
         if (i === cart.length - 1){
