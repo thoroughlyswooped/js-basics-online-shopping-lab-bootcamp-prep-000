@@ -50,8 +50,8 @@ function removeFromCart(item) {
   console.log(cart);
   var ogLength = cart.length;
   for (var i = 0; i < cart.length; i++) {
-    if (cart[i][0] === item) {
-      
+    if (cart[i].itemName === item) {
+      cart.splice(i, 1);
     }
   }
   if (cart.length === ogLength) {
