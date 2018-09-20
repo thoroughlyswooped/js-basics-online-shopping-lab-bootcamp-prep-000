@@ -23,14 +23,16 @@ function viewCart() {
   } else {
     var returnString = `In your cart, you have ${cart[0].itemName} at ${cart[0].itemPrice}`;
     for (var i = 1 ; i < cart.length; i++){
-      if (cart.length >= 3) {
-          // add commas  
-          if (i === cart.length - 1){
-            returnString += `, and ${cart[i].itemName} at ${itemPrice}.`
-          } else {
+        // check if current item is the last item in the cart
+        if (i === cart.length - 1){
+          // if it isn't then you need to add a comma and the data
+          returnString += `, and ${cart[i].itemName} at ${itemPrice}.`
+        } else {
+          // otherwise just close off the statement
           returnString += `, ${cart[i].itemName} at ${cart[i].itemPrice}`;
-          }
+        }
     }
+    return returnString;
   }
 }
 
