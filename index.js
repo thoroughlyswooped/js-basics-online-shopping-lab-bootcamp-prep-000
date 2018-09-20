@@ -47,6 +47,7 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  var index = cart.indexOf(item);
   
 }
 
