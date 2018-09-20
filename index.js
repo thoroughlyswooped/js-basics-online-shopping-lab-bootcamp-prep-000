@@ -26,7 +26,7 @@ function viewCart() {
         // check if current item is the last item in the cart
         if (i === cart.length - 1){
           // if it isn't then you need to add a comma and the data
-          returnString += `, and ${cart[i].itemName} at $${itemPrice}.`
+          returnString += `, and ${cart[i].itemName} at $${cart[i].itemPrice}.`
         } else {
           // otherwise just close off the statement
           returnString += `, ${cart[i].itemName} at $${cart[i].itemPrice}`;
