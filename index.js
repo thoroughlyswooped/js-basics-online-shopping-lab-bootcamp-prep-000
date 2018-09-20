@@ -24,8 +24,12 @@ function viewCart() {
     var returnString = `In your cart, you have ${cart[0].itemName} at ${cart[0].itemPrice}`;
     for (var i = 1 ; i < cart.length; i++){
       if (cart.length >= 3) {
-            
-        }
+          // add commas  
+          if (i === cart.length - 1){
+            returnString += `, and ${cart[i].itemName} at ${itemPrice}.`
+          } else {
+          returnString += `, ${cart[i].itemName} at ${cart[i].itemPrice}`;
+          }
     }
   }
 }
