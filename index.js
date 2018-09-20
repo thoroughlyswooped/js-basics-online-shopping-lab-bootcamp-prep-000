@@ -51,6 +51,7 @@ function removeFromCart(item) {
   var ogLength = cart.length;
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
+      // delete cannot be used here because it deletes the item but it does no change the length of the array
       cart.splice(i, 1);
     }
   }
